@@ -36,19 +36,19 @@ public class MainActivity extends AppCompatActivity {
         mUser = mAuth.getCurrentUser();
     }
 
-    protected void gotoSignup(View view) {
-        if (mUser == null) startActivity(new Intent(this, SignupActivity.class));
-    }
-
-    protected void gotoProfile(View view) {
+    public void gotoProfile(View view) {
         if (mUser != null) startActivity(new Intent(this, ProfileActivity.class));
     }
 
-    protected void gotoGPS(View view) {
+    public void gotoGPS(View view) {
         startActivity(new Intent(this, GPSActivity.class));
     }
 
-    protected void gotoMap(View view) {
+    public void gotoMap(View view) {
         startActivity(new Intent(this, MapsActivity.class));
+    }
+
+    public void gotoSignup(View view) {
+        if (mUser == null) startActivity(new Intent(this, SignupActivity.class));
     }
 }

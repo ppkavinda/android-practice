@@ -40,4 +40,6 @@
     <string name="test_password">testpassword</string>
     <string name="firebase_path">location</string>
     <string name="btn_map">Map</string>
+
+    <string name="directionsApiKey">AIzaSyCd6J1_1vKsKoq7cP5LBBv28TBIZ1EaBwk</string>
 </resources>

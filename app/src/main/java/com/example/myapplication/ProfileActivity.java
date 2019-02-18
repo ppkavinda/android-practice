@@ -66,7 +66,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
-    protected void saveProfile(View view) {
+    public void saveProfile(View view) {
 //        UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
 //                .setDisplayName(profileNameBox.getText().toString().trim())
 //                .build();
