@@ -19,7 +19,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FirebaseAuth mAuth;
     private FirebaseUser mUser;
 
     @Override
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mAuth = FirebaseAuth.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
     }
 
@@ -41,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoGPS(View view) {
-        startActivity(new Intent(this, GPSActivity.class));
+        if (mUser != null) startActivity(new Intent(this, GPSActivity.class));
     }
 
     public void gotoMap(View view) {
-        startActivity(new Intent(this, MapsActivity.class));
+        if (mUser != null) startActivity(new Intent(this, MapsActivity.class));
     }
 
     public void gotoSignup(View view) {
